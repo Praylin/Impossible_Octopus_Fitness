@@ -1,0 +1,16 @@
+.container {
+	width: 992px;
+	align: center;
+}
+
+img {
+	width:70px;
+	height:100px;
+	margin-left: 80px;
+	margin-top: 20px;
+}
+
+.tagline {
+	margin-top: 10px;
+	margin-left: 30px;
+}

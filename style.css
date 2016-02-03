@@ -116,6 +116,14 @@ aside {
   background-color: white;
 }
 
+#welcomeversion {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  padding: 5px;
+}
 
 
 

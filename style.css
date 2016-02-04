@@ -60,10 +60,6 @@ html *
 	margin: 0 auto; /* Centered container element */
 }
 
-/*.header {
-	background: #634271;
-}*/
-
 /* Style for Logo */
 
 #idlogo {
@@ -82,14 +78,12 @@ html *
 
 #links ul {
 	list-style-type: none;
-	/*float: right;*/
 	margin-top: 20px;
 }
 
 #links ul li {
 	padding: 0 5px;
 	display: inline;
-	/*float: right; */
 }
 
 /*Align tagline under the logo */
@@ -127,11 +121,8 @@ ul#menu li a {
 
 #menubar {
 	overflow:hidden;
-	/*position:relative;
-	float: left;*/
 	margin: auto;
 	display: block;
-	/*margin-right: auto;*/
 	text-align: center;
 	width: 60%;
 }
@@ -149,13 +140,13 @@ h3 {
 p {
     margin: 5px;
     text-align: justify;
-    /*font-family: Arial !important;*/
 }
 
 .date {
 	font-style: italic;
 	font-size: small;
 }
+
 
 img {
 	float: left;
@@ -165,6 +156,13 @@ img {
 	padding: 5px;
 }
 
+.notable-img {
+	width: 75px;
+	height: 75px;
+}
+
+
+
 article {
 	float: left;
 	display: block;
@@ -172,7 +170,6 @@ article {
     margin-left: 10px;
 	margin-top: 10px;
 	margin-right: 10px;
-	/*background: #ABABAB;*/
 }
 
 aside {
@@ -183,7 +180,6 @@ aside {
 	margin-right: 10px;
 	margin-top: 10px;
 	padding-right: 10px; 
-	/*background: #2D2D2D;*/
 }
 
 .updates {

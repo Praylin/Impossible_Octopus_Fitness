@@ -60,6 +60,7 @@ html *
 	margin: 0 auto; /* Centered container element */
 }
 
+
 /* Style for Logo */
 
 #idlogo {
@@ -85,6 +86,8 @@ html *
 	padding: 0 5px;
 	display: inline;
 }
+
+#links li+li { border-left: 1px solid #000000 }
 
 /*Align tagline under the logo */
 
@@ -180,6 +183,24 @@ aside {
 	padding-right: 10px; 
 }
 
+/* Styles for Link */
+
+a {
+	color: red;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	transition-delay: 2s;
+	transition-timing-function: linear;
+    color: black;
+    background-color: yellow;
+}
+
 .updates {
 	float: left;
 }
@@ -202,4 +223,9 @@ aside {
 iframe {
 	width: 90%;
     height: 90%;
+}
+
+.user p {
+	padding-right: 50px;
+	width: 80%;
 }

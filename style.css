@@ -113,23 +113,14 @@ aside {
 }
 /* Media Query to modify article and aside */
 @media all and (max-width: 768px){
+.container {
+	width: 100%;
+	}
 article {
-	float: left;
-	display: block;
-	width: 60%;
-    margin-left: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
+	width: 95%;
 }
 aside {
-	float: left;
-	display: block;
-	width: 30%;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	padding-right: 10px; 
-}
+	width: 95%;
 }
 .updates {
 	float: left;
@@ -142,20 +133,9 @@ aside {
   	background-color: yellow;
   	padding: 30px;
 }
+}
 /* End of establish Container and major page sub-elements */ 
-/* Media Query to modify Container and major page sub-elements */
-@media all and (max-width: 768px){
-	.container {
-	width: 100%;
-	}
-article {
-	width: 95%;
-}
-aside {
-	width: 95%;
-}
-}
-/* End of Media Query to modify Container and major page sub-elements */
+
 
 
 /* Style for Logo */

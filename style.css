@@ -1,9 +1,7 @@
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
-*/
-
+   */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -48,132 +46,54 @@ table {
 	border-spacing: 0;
 }
 
+
+
 /* Start of written css */
 
 
 
+/* General page styles */
 html *
 {
 	color: #000;
 	font-family: Arial !important;
 }
-
-.container {
-	width: 992px;
-	margin: 0 auto; /* Centered container element */
-}
-
-
-/* Style for Logo */
-
-#idlogo {
-	width: 70px;
-	height:100px;
-	margin-left: 40px;
-	margin-top: 0px;
-	float: left;
-	padding: 10px;
-}
-
-/* Stacking horizontally the links and aligning it to right*/ 
-#links {
-	float: right;
-	width: 250px;
-}
-
-#links ul li{
-	list-style-type: none;
-	margin-top: 20px;
-}
-
-
-#links li {
-	padding: 0 5px;
-	display: inline;
-}
-
-#links li+li { border-left: 1px solid #000000 }
-
-/*Align tagline under the logo */
-
-.tagline {
-	display: block;
-	text-align: left;
-	position: relative;
-	clear: left;
-	padding-top: 2px;
-	font-style: italic;
-}
-
-/* Stacking horizontally the menu and aligning it to center */ 
-
-ul#menu {
-    padding: 0px;
-    text-align: center;
-}
-
-ul#menu li {
-    display: block;
-    float: left;
-    padding: 20px;
-    text-align: center;
-}
-
-ul#menu li a {
-    background-color: black;
-    color: white;
-    padding: 10px 40px;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
-
-}
-
-#menu li a{
-	width: 200px;
-}
-
-#menubar {
-	overflow:scroll;
-	margin: auto;
-	display: block;
-	text-align: center;
-	width: 60%;
-}
-
 h2 {
 	font-weight: bold;
 	padding: 10px;
 }
-
 h3 {
 	font-weight: bold;
 	font-size: large;
 }
-
 p {
     margin: 5px;
     text-align: justify;
 }
-
-.date {
-	font-style: italic;
-	font-size: small;
-}
-
-
 img {
 	float: left;
 	width:100px;
 	height:100px;
-	margin: 1 1 1 1;
+	margin: 0 0 0 0;
 	padding: 5px;
 }
-
+.date {
+	font-style: italic;
+	font-size: small;
+}
 .notable-img {
 	width: 75px;
 	height: 75px;
 }
+/* End of general page styles */
 
+
+
+/* Establish Container and major page sub-elements */ 
+.container {
+	width: 992px;
+	margin: 0 auto; /* Centered container element */
+}
 article {
 	float: left;
 	display: block;
@@ -182,7 +102,6 @@ article {
 	margin-top: 10px;
 	margin-right: 10px;
 }
-
 aside {
 	float: left;
 	display: block;
@@ -192,17 +111,103 @@ aside {
 	margin-top: 10px;
 	padding-right: 10px; 
 }
+/* Media Query to modify article and aside */
+@media all and (max-width: 768px){
+article {
+	float: left;
+	display: block;
+	width: 60%;
+    margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+aside {
+	float: left;
+	display: block;
+	width: 30%;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding-right: 10px; 
+}
+}
+.updates {
+	float: left;
+}
+#welcomeversion {
+  	position: fixed;
+  	bottom: 0;
+  	right:0;
+  	width: 200px;
+  	background-color: yellow;
+  	padding: 30px;
+}
+/* End of establish Container and major page sub-elements */ 
+/* Media Query to modify Container and major page sub-elements */
+@media all and (max-width: 768px){
+	.container {
+	width: 100%;
+	}
+article {
+	width: 95%;
+}
+aside {
+	width: 95%;
+}
+}
+/* End of Media Query to modify Container and major page sub-elements */
 
-/* Styles for Link */
 
+/* Style for Logo */
+#idlogo {
+	width: 70px;
+	height:100px;
+	margin-left: 40px;
+	margin-top: 0px;
+	float: left;
+	padding: 10px;
+}
+/* Media query for logo under 768px */ 
+@media all and (max-width: 768px){
+#logolinks{
+	width: 99%;
+	clear float
+}
+
+#idlogo {
+	clear float
+	display: Block;
+}
+}
+
+/* Align tagline under the logo */
+.tagline {
+	display: block;
+	text-align: left;
+	position: relative;
+	clear: left;
+	padding-top: 2px;
+	font-style: italic;
+	}
+
+/*Media Query to dissapear tagline */
+@media all and (max-width: 768px){
+.tagline {
+	position: fixed !important;
+   	top: -9999px !important;
+   	left: -9999px !important;
+}
+}
+
+
+
+/* Styles for Links */
 a {
 	color: red;
 }
-
 a:link {
     text-decoration: none;
 }
-
 a:hover {
 	text-decoration: underline;
 	transition-delay: 2s;
@@ -210,117 +215,131 @@ a:hover {
     color: black;
     background-color: yellow;
 }
+/* End of styles for Links */
 
-.updates {
-	float: left;
+
+
+
+/* Edit profile and logout links stacked horizontally and aligned right*/ 
+#links {
+	float: right;
 }
-
-#welcomeversion {
-  position: fixed;
-  bottom: 0;
-  right:0;
-  width: 200px;
-  background-color: yellow;
-  padding: 30px;
+#links ul li{
+	list-style-type: none;
+	
 }
-
-#content {
-	position: fixed;
+#links li {
+	padding: 5px;
+	display: inline;
+}
+#links li+li {
+	border-left: 1px solid #000000
+}
+/* End of edit profile and logout links stacked horizontally and aligned right*/
+/* Media Query for Styles for Links for devices under 768px */
+@media all and (max-width: 768px){
+#links {
+	display: block;
+    float: left;
+    text-align: center;
+    width: 100%%;
+}
+#links ul li{
+	list-style-type: none;
+	
+	margin-top: 0;
+	width: 100%;
+}
+#links li {
+	display: block;
+    float: left;
+    
+    text-align: center;
     width: 100%;
-    height: 90%;
+}
+#links li a {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+    display: block;
+    width: 95%;
+}
+#links li+li {
+	border-left: none;
+}    
 }
 
-iframe {
-	width: 90%;
-    height: 90%;
+/* End Styles for Links for devices under 768px */
+
+
+
+/* Establish menu, stack horizontally and align center */ 
+#menubar {
+	overflow:scroll;
+	margin: auto;
+	display: block;
+	text-align: center;
+	padding: 5px;
+	width: 50%;
+	}
+#menu {
+    padding: 5px;
+    text-align: right;
+}
+#menu li {
+    display: block;
+    float: left;
+    padding: 5px;
+    text-align: center;
+}
+#menu li a {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 3px 3px 3px 3px;
+    width: 300px;
+}
+/* End of establish menu, stack horizontally and align center */ 
+/* Media query for menu when view under 768px */ 
+@media all and (max-width: 768px){
+#menubar {
+	width: 100%;
+	}
+#menu {
+    width: 100%;
+}
+#menu li {
+    width: 100%;
+}
+#menu li a {
+	display: block;
+    width: 100%;
+    padding: 10px;
 }
 
-.user p {
-	padding-right: 50px;
-	width: 80%;
-}
+
+
+
+
+
+
+
 
 /*Styles for background image in aboutus.html*/
-
 #bg_img {
 	background-image: url("backgroundpic.gif");
 	background-repeat: no-repeat; 
-	background-color: "#476b6b";
+	background-color: yellow;
 }
-
 h1 {
 	font-size: 300%;
 	text-align: center;
 	font-style: italic;
 	padding: 20px;
 }
-
 .about p {
 	font-size: 200px;
-}
-
-/*Media query for devices under 768px*/ 
-
-@media screen and (max-width: 768px)  {
-	
-	.container {
-	 width: auto !important;
-	 float: left;
-  	}
-
-  	#idlogo {
-		width: 70px;
-		height:100px;
-		margin-left: 40px;
-		margin-top: 0px;
-		padding: 5px;
-	}
-	
-	.tagline {
-		position: fixed !important;
-   		top: -9999px !important;
-   		left: -9999px !important;
-	}
-
-	#links ul {
-		display: block ;
-		list-style-type: none;
-		margin-top: 5px;
-		/*margin-left: 50px;*/
-		float: none;
-	}
-	
-	/*#links ul li {
-		padding: 0 5px;
-	}*/
-	
-	#links li {
-		display: block !important;
-		margin-top: 2px !important;
-		/*margin-left: 5px;*/
-	}
-
-	ul#menu li {
-    display: block !important;
-    padding: 10px;
-	}
-
-	ul#menu li a {
-    background-color: black;
-    color: white;
-    padding: 10px 40px;
-    text-decoration: none;
-    border-radius: 4px 4px 0 0;
-	}
-
-	#menubar {
-		width: 60%;
-	}
-
-	/*#content {
-	position: absolute;
-    width: 50%;
-    height: 90%;
-	}*/
-
 }

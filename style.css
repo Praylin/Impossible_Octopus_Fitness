@@ -287,6 +287,7 @@ h1 {
 		list-style-type: none;
 		margin-top: 5px;
 		/*margin-left: 50px;*/
+		float: none;
 	}
 	
 	/*#links ul li {
@@ -314,10 +315,6 @@ h1 {
 
 	#menubar {
 		width: 60%;
-	}
-
-	iframe {
-		padding: 100px;
 	}
 
 	/*#content {

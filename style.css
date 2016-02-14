@@ -103,7 +103,7 @@ article {
 	margin-right: 10px;
 }
 aside {
-	float: left;
+	float: right;
 	display: block;
 	width: 30%;
 	margin-left: 10px;
@@ -111,6 +111,20 @@ aside {
 	margin-top: 10px;
 	padding-right: 10px; 
 }
+
+.updates {
+	float: left;
+}
+
+#welcomeversion {
+  	position: fixed;
+  	bottom: 0;
+  	right:0;
+  	width: 200px;
+  	background-color: yellow;
+  	padding: 30px;
+}
+
 /* Media Query to modify article and aside */
 @media all and (max-width: 768px){
 .container {
@@ -170,7 +184,7 @@ aside {
 	font-style: italic;
 	}
 
-/*Media Query to dissapear tagline */
+/*Media Query to disappear tagline */
 @media all and (max-width: 768px){
 .tagline {
 	position: fixed !important;
@@ -257,7 +271,7 @@ a:hover {
 
 /* Establish menu, stack horizontally and align center */ 
 #menubar {
-	overflow:scroll;
+	overflow:hidden;
 	margin: auto;
 	display: block;
 	text-align: center;
@@ -300,12 +314,32 @@ a:hover {
     padding: 10px;
 }
 
+/*Media query for ipad version*/
 
+@media (min-width: 768px) and (max-width: 992px){
+	.container {
+		width: 100%;
+	}
 
+	#links {
+		float: right;
+	}
+	#part1 {
+		float:left;
+    	width:33%;
+	}
+	#part2 {
+    	display: inline-block;
+    	margin:0 auto;
+   		width:33%;
+	}
 
-
-
-
+	#welcomeversion {
+    	float:right; 
+    	width:33%;
+    	background-color: white !important;
+	}
+}
 
 
 /*Styles for background image in aboutus.html*/

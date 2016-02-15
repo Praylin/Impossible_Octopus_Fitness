@@ -165,11 +165,11 @@ aside {
 @media all and (max-width: 768px){
 #logolinks{
 	width: 99%;
-	clear float
+	clear: float;
 }
 
 #idlogo {
-	clear float
+	clear:float;
 	display: Block;
 }
 }
@@ -234,7 +234,7 @@ a:hover {
 @media all and (max-width: 768px){
 #links {
 	display: block;
-    float: left;
+    float: none;
     text-align: center;
     width: 100%%;
 }

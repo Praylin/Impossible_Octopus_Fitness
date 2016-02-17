@@ -92,11 +92,12 @@ img {
 /* Establish Container and major page sub-elements */ 
 .container {
 	display: flex; /* Centered container element */
+	flex-direction: row;
 }
 
 .header {
 	display: flex;
-
+	flex-direction: row;
 }
 
 #logolinks {
@@ -113,22 +114,16 @@ article {
 	
 	justify-content: space-around;
 	width: 60%;
-    margin-left: 10px;
-	margin-top: 10px;
-	margin-right: 10px;
+    margin: 10px;
 }
 aside {
-	
 	justify-content: space-around;
 	width: 30%;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-top: 10px;
-	padding-right: 10px; 
+	margin: 10px;
 }
 
 .updates {
-	float: left;
+	justify-content: space-around;
 }
 
 #welcomeversion {
@@ -137,31 +132,26 @@ aside {
   	right:0;
   	width: 200px;
   	background-color: yellow;
-  	padding: 30px;
+  	
 }
 
 /* Media Query to modify article and aside */
 @media all and (max-width: 768px){
-.container {
-	width: 100%;
-}
+/*.container {
+	width: 100%;*/
+/*}
 article {
 	width: 95%;
 }
 aside {
 	width: 95%;
+}*/
+/*.updates {
+	float: left;*/
 }
-.updates {
-	float: left;
-}
-#welcomeversion {
-  	position: fixed;
-  	bottom: 0;
-  	right:0;
-  	width: 200px;
-  	background-color: yellow;
+/*#welcomeversion {
   	padding: 30px;
-}
+}*/
 }
 /* End of establish Container and major page sub-elements */ 
 
@@ -180,18 +170,15 @@ aside {
 @media all and (max-width: 768px){
 #logolinks{
 	width: 99%;
-	clear: float;
-}
+	}
 
 #idlogo {
-	clear:float;
-	display: Block;
-}
+	}
 }
 
 /* Align tagline under the logo */
 .tagline {
-	display: block;
+	/*display: block;*/
 	text-align: left;
 	position: relative;
 	clear: left;
@@ -231,7 +218,7 @@ a:hover {
 
 /* Edit profile and logout links stacked horizontally and aligned right*/ 
 #links {
-	float: right;
+	justify-content: flex-end;
 }
 #links ul li{
 	list-style-type: none;

@@ -103,6 +103,8 @@ img {
 .header {
 	display: flex;
 	flex-direction: column;
+	padding: 20px;
+	padding-left: 40px;
 	/*justify-content: space-around;*/
 }
 
@@ -119,9 +121,10 @@ section {
 
 #logolinks {
 	display: flex;
-	flex-direction: row;
-	/*justify-content: space-between; /*Align child elements to left and right ends*/
-	justify-content: space-around;
+	/*flex-direction: row;*/
+	justify-content: space-between; /*Align child elements to left and right ends*/
+	/*justify-content: space-around;*/
+
 }
 
 
@@ -180,7 +183,7 @@ aside {
 	width: 70px;
 	height:100px;
 	margin-left: 0px;
-	margin-top: 0px;
+	margin-top: 10px;
 	/*float: left;*/
 	padding: 0px;
 }
@@ -203,7 +206,7 @@ aside {
 	clear: left;*/
 	/*padding-top: 2px;*/
 	font-style: italic;
-	margin-left: 90px;
+	/*margin-left: 90px;*/
 	}
 
 /*Media Query to disappear tagline */
@@ -238,17 +241,22 @@ a:hover {
 
 /* Edit profile and logout links stacked horizontally and aligned right*/ 
 #links {
+	display: flex;
 	flex-direction: row;
+
 }
 #links ul li{
 	
-
+	
+	flex-direction: row;
 	list-style-type: none;
 	
 }
 #links li {
+	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
+
 	padding: 5px;
 	
 }
@@ -351,7 +359,7 @@ a:hover {
     width: 100%;
     padding: 10px;
 }
-
+}
 /*Media query for ipad version*/
 
 @media (min-width: 768px) and (max-width: 992px){

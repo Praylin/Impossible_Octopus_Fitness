@@ -71,7 +71,7 @@ p {
     text-align: justify;
 }
 img {
-	float: left;
+	justify-content: flex-start;
 	width:100px;
 	height:100px;
 	margin: 0 0 0 0;
@@ -91,20 +91,35 @@ img {
 
 /* Establish Container and major page sub-elements */ 
 .container {
-	width: 992px;
-	margin: 0 auto; /* Centered container element */
+	display: flex; /* Centered container element */
 }
+
+.header {
+	display: flex;
+
+}
+
+#logolinks {
+	display: flex;
+	flex-direction: row;
+}
+
+section {
+	display: flex;
+	flex-direction: row;
+}
+
 article {
-	float: left;
-	display: block;
+	
+	justify-content: space-around;
 	width: 60%;
     margin-left: 10px;
 	margin-top: 10px;
 	margin-right: 10px;
 }
 aside {
-	float: right;
-	display: block;
+	
+	justify-content: space-around;
 	width: 30%;
 	margin-left: 10px;
 	margin-right: 10px;
@@ -129,7 +144,7 @@ aside {
 @media all and (max-width: 768px){
 .container {
 	width: 100%;
-	}
+}
 article {
 	width: 95%;
 }
@@ -236,7 +251,7 @@ a:hover {
 	display: block;
     float: none;
     text-align: center;
-    width: 100%%;
+    width: 100%;
 }
 #links ul li{
 	list-style-type: none;

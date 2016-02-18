@@ -1,3 +1,17 @@
+/* 0. Meyerweb CSS Reset */
+/* 1. General Page Styles */
+/* 2. Container, Header, Section, Aside, Article, and Updates */
+/* 3. "Edit my profile" and "Logout" links */
+/* 4. Logo */
+/* 5. Tagline */
+/* 6. Menu Bar */
+/* 7. Media Query for min/max: 768px/992px */
+/* 8. Media Query for min 992px */
+/* 9. About Us page Background Image */
+
+
+/* 0. Meyerweb CSS Reset */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -47,29 +61,35 @@ table {
 }
 
 
+/* ********** 1. General Page Styles ********** */
 
-/* Start of written css */
-
-
-
-/* General page styles */
-html *
-{
+html * {
 	color: #000;
 	font-family: Arial !important;
 }
+h1 {
+	font-size: 300%;
+	text-align: center;
+	font-style: italic;
+	padding: 20px;
+}
 h2 {
+	font-size: 200%;
 	font-weight: bold;
-	padding: 10px;
+	padding-bottom: 5px;
+	padding-left: 2px;
+
 }
 h3 {
 	font-weight: bold;
 	font-size: large;
+	font-style: italic;
+	padding: 5px;
 }
-
 h6 {
 	font-weight: bold;
 	margin: auto;
+	text-align: center;
 }
 p {
     margin: 5px;
@@ -77,150 +97,10 @@ p {
 }
 img {
 	justify-content: flex-start;
-	width:100px;
-	height:100px;
-	margin: 0 0 0 0;
-	padding: 5px;
+	width: 50px;
+	height: auto;
+/*	padding: 5px;*/
 }
-.date {
-	font-style: italic;
-	font-size: small;
-}
-.notable-img {
-	width: 75px;
-	height: 75px;
-}
-/* End of general page styles */
-
-
-
-/* Establish Container and major page sub-elements */ 
-.container {
-	display: flex; 
-	flex-direction: column;
-}
-
-.header {
-	display: flex;
-	flex-direction: column;
-	padding: 20px;
-	padding-left: 40px;
-	/*justify-content: space-around;*/
-}
-
-section {
-	display: flex;
-	flex-direction: column;
-}
-
-.article_aside {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-#logolinks {
-	display: flex;
-	/*flex-direction: row;*/
-	justify-content: space-between; /*Align child elements to left and right ends*/
-	/*justify-content: space-around;*/
-
-}
-
-
-
-article {
-	
-	justify-content: space-around;
-	width: 60%;
-    margin: 10px;
-}
-aside {
-	justify-content: space-around;
-	width: 30%;
-	margin: 10px;
-}
-
-.updates {
-	justify-content: space-around;
-}
-
-#welcomeversion {
-  	position: fixed;
-  	bottom: 0;
-  	right:0;
-  	width: 200px;
-  	background-color: yellow;
-  	
-}
-
-/* Media Query to modify article and aside */
-@media all and (max-width: 768px){
-/*.container {
-	width: 100%;*/
-/*}
-article {
-	width: 95%;
-}
-aside {
-	width: 95%;
-}*/
-/*.updates {
-	float: left;*/
-}
-/*#welcomeversion {
-  	padding: 30px;
-}*/
-}
-/* End of establish Container and major page sub-elements */ 
-
-
-
-/* Style for Logo */
-#idlogo {
-	/*justify-content: flex-start;
-	/*justify-content: space-around;*/
-	width: 70px;
-	height:100px;
-	margin-left: 0px;
-	margin-top: 10px;
-	/*float: left;*/
-	padding: 0px;
-}
-/* Media query for logo under 768px */ 
-@media all and (max-width: 768px){
-#logolinks{
-	width: 99%;
-	}
-
-#idlogo {
-	}
-}
-
-/* Align tagline under the logo */
-.tagline {
-	justify-content: flex-start;
-	justify-content: space-around;
-	/*text-align: left;
-	position: relative;
-	clear: left;*/
-	/*padding-top: 2px;*/
-	font-style: italic;
-	/*margin-left: 90px;*/
-	}
-
-/*Media Query to disappear tagline */
-@media all and (max-width: 768px){
-.tagline {
-	position: fixed !important;
-   	top: -9999px !important;
-   	left: -9999px !important;
-}
-}
-
-
-
-/* Styles for Links */
 a {
 	color: red;
 }
@@ -234,38 +114,292 @@ a:hover {
     color: black;
     background-color: yellow;
 }
-/* End of styles for Links */
+.date {
+	font-style: italic;
+	font-size: small;
+	margin: 5px;
+}
+.status-updates-img{
+	float: left;
+    width: 200px;
+	height: 200px;
+	padding: 5px 5px 0 5px;
+}
+.notable-img {
+	float: left;
+	width: 90px;
+	height: 90px;
+	padding: 5px 5px 0 5px;
+}
+#bg_img { /*  About Us page Background image */
+	background-image: url("backgroundpic.gif");
+	background-repeat: no-repeat; 
+	background-color: yellow;
+}
+.about p { /*  About Us page  */
+	font-size: 200px;
+}
 
 
 
+/* ***** 2. Container Header Section Aside Article Updates ***** */
+section {
+	display: flex;
+	flex-direction: column;
+}
+article {
+	/*justify-content: space-between;*/
+	width: 65%;
+    margin: 10px;
+}
+aside {
+	/*justify-content: space-around;*/
+	width: 35%;
+	margin: 10px;
+}
+.container {
+	display: flex; 
+	flex-direction: column;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	padding-left: 40px;
+	/*justify-content: space-around;*/
+}
+.article_aside {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+#logolinks {
+	display: flex;
+	/*flex-direction: row;*/
+	align-self: auto;
+	justify-content: space-between; /*Align child elements to left and right ends*/
+	/*justify-content: space-around;*/
+}
+.updates {
+	/*justify-content: space-around;*/
+	float: left;
+}
+.notable_users {
+	/*justify-content: space-around;*/
+	float: left;
+}
+.trending_status{
+	float: left;
+}
+#welcomeversion {
+  	position: fixed;
+  	bottom: 0;
+  	right:0;
+  	width: 200px;
+  	background-color: yellow;
+}
 
-/* Edit profile and logout links stacked horizontally and aligned right*/ 
+
+/* ********** 3. "Edit my profile" and "Logout" links ********** */ 
+
 #links {
 	display: flex;
 	flex-direction: row;
-
+	justify-content: space-around;
+	/*list-style-type: none;*/
+	padding: 5px;
 }
-#links ul li{
-	
-	
+/*#links ul li{
 	flex-direction: row;
 	list-style-type: none;
-	
-}
-#links li {
+}*/
+/*#links li {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
-
 	padding: 5px;
-	
+}*/
+/*#links li+li {
+	border-left: 1px solid #000000*/
+/*}*/
+
+
+/* 4. ********** 4. Style for Logo ********** */
+
+#logo {
+	/*justify-content: flex-start;*/
+	justify-content: space-around;
+	width: 75px;
+	height: 120px;
 }
-#links li+li {
-	border-left: 1px solid #000000
+
+
+/* 5. ********** Tagline ********** 
+
+/*.tagline {*/
+	/*justify-content: flex-start;
+	justify-content: space-around;*/
+	/*text-align: left;
+	position: relative;
+	clear: left;*/
+	/*padding-top: 2px;*/
+	/*font-style: italic;*/
+	/*margin-left: 90px;*/
+	/*}*/
+
+
+/* 6. ********** Menu Bar ********** */
+
+#menubar {
+	/*display: flex;*/
+	/*flex-direction: row;*/
+	/*justify-content: center;*/
+	/*overflow:hidden;*/
+	/*margin: auto;*/
+	/*display: block;
+	text-align: center;*/
+	/*padding: 5px;*/
+	/*width: auto;*/
+	}
+#menu {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    /*padding: 5px;*/
+    /*text-align: right;*/
 }
-/* End of edit profile and logout links stacked horizontally and aligned right*/
+#menu li {
+	/*display: flex;
+	flex-direction: row;
+	justify-content: center;
+    display: block;*/
+    padding: 5px;
+    /*text-align: center;*/
+}
+#menu li a {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 150px;
+}
+
+/* 8. Media Query for min 992px */
+/* 9. About Us page Background Image */
+
+
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+
+/*Everything below has not been cleaned up.
+Best practices seem to dictate that mobile version
+is first to load, then media queries for larger screens*/
+/**************************************/
+/**************************************/
+/**************************************/
+/**************************************/
+
+
+
+/*Media Query to disappear tagline */
+/*@media all and (max-width: 768px){
+.tagline {
+	position: fixed !important;
+   	top: -9999px !important;
+   	left: -9999px !important;
+}
+}*/
+
+
+/* Media query for menu when view under 768px */ 
+/*@media all and (max-width: 768px){
+#menubar {
+	width: 100%;
+	}
+#menu {
+    width: 100%;
+}
+#menu li {
+    width: 100%;
+}
+#menu li a {
+	display: block;
+    width: 100%;
+    padding: 10px;
+}
+}*/
+
+
+/*Media query for ipad version*/
+
+/*@media (min-width: 768px) and (max-width: 992px){
+	.container {
+		width: 100%;
+	}
+
+	#links {
+		float: right;
+	}
+	#part1 {
+		float:left;
+    	width:33%;
+	}
+	#part2 {
+    	display: inline-block;
+    	margin:0 auto;
+   		width:33%;
+	}
+
+	#welcomeversion {
+    	float:right; 
+    	width:33%;
+    	background-color: white !important;
+	}
+}
+*/
+
+
+/* Media Query to modify article and aside */
+/*@media all and (max-width: 768px){
+.container {
+	width: 100%;
+}
+article {
+	width: 95%;
+}
+aside {
+	width: 95%;
+}
+.updates {
+	float: left;
+}
+#welcomeversion {
+  	padding: 30px;
+}
+}*/
+
+
+
+
+
+/* Media query for logo under 768px */ 
+/*@media all and (max-width: 768px){
+#logolinks{
+	width: 99%;
+	}
+#idlogo {
+	}
+}*/
+
+
 /* Media Query for Styles for Links for devices under 768px */
-@media all and (max-width: 768px){
+/*@media all and (max-width: 768px){
 #links {
 	display: block;
     float: none;
@@ -297,109 +431,10 @@ a:hover {
 #links li+li {
 	border-left: none;
 }    
-}
+}*/
 
 /* End Styles for Links for devices under 768px */
 
 
 
-/* Establish menu, stack horizontally and align center */ 
-#menubar {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	/*overflow:hidden;*/
-	margin: auto;
-	/*display: block;
-	text-align: center;*/
-	padding: 5px;
-	width: 50%;
-	}
-#menu {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-    padding: 5px;
-    /*text-align: right;*/
-}
-#menu li {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-    /*display: block;
-    float: left;*/
-    padding: 5px;
-    text-align: center;
-}
-#menu li a {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    text-decoration: none;
-    border-radius: 3px 3px 3px 3px;
-    width: 300px;
-}
-/* End of establish menu, stack horizontally and align center */ 
-/* Media query for menu when view under 768px */ 
-@media all and (max-width: 768px){
-#menubar {
-	width: 100%;
-	}
-#menu {
-    width: 100%;
-}
-#menu li {
-    width: 100%;
-}
-#menu li a {
-	display: block;
-    width: 100%;
-    padding: 10px;
-}
-}
-/*Media query for ipad version*/
 
-@media (min-width: 768px) and (max-width: 992px){
-	.container {
-		width: 100%;
-	}
-
-	#links {
-		float: right;
-	}
-	#part1 {
-		float:left;
-    	width:33%;
-	}
-	#part2 {
-    	display: inline-block;
-    	margin:0 auto;
-   		width:33%;
-	}
-
-	#welcomeversion {
-    	float:right; 
-    	width:33%;
-    	background-color: white !important;
-	}
-}
-
-
-/*Styles for background image in aboutus.html*/
-#bg_img {
-	background-image: url("backgroundpic.gif");
-	background-repeat: no-repeat; 
-	background-color: yellow;
-}
-h1 {
-	font-size: 300%;
-	text-align: center;
-	font-style: italic;
-	padding: 20px;
-}
-.about p {
-	font-size: 200px;
-}

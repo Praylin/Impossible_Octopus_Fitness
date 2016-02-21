@@ -160,6 +160,9 @@ aside {
 .container {
 	display: flex; 
 	flex-direction: column;
+	padding: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .header {
 	display: flex;
@@ -205,23 +208,24 @@ aside {
 #links {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	/*align-content: space-around;*/
 	/*list-style-type: none;*/
 	padding: 5px;
 }
 /*#links ul li{
 	flex-direction: row;
 	list-style-type: none;
+	justify-content: space-around;
 }*/
-/*#links li {
+#links li {
 	display: flex;
 	justify-content: flex-end;
 	flex-direction: row;
 	padding: 5px;
-}*/
-/*#links li+li {
-	border-left: 1px solid #000000*/
-/*}*/
+}
+#links li+li {
+	border-left: 1px solid #000000
+}
 
 
 /* 4. ********** 4. Style for Logo ********** */
@@ -288,6 +292,66 @@ aside {
     width: 150px;
 }
 
+/*Media query for width below 768px*/
+
+@media all and (max-width: 768px){
+
+	.container {
+		display: flex; 
+		flex-direction: column;
+	}
+
+	.tagline {
+		position: fixed;
+   		top: -9999px;
+   		left: -9999px;
+	}
+
+	#logolinks {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#links {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#links li+li {
+		border-left: none;
+	}
+
+	#menu {
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
+
+@media (min-width: 768px) and (max-width: 992px){
+	.container {
+		display: flex;
+	}
+
+	#links {
+		float: right;
+	}
+	#part1 {
+		float:left;
+    	width:33%;
+	}
+	#part2 {
+    	display: inline-block;
+    	margin:0 auto;
+   		width:33%;
+	}
+
+	#welcomeversion {
+    	float:right; 
+    	width:33%;
+    	background-color: white !important;
+	}
 /* 8. Media Query for min 992px */
 /* 9. About Us page Background Image */
 
@@ -305,35 +369,6 @@ is first to load, then media queries for larger screens*/
 /**************************************/
 /**************************************/
 
-
-
-/*Media Query to disappear tagline */
-/*@media all and (max-width: 768px){
-.tagline {
-	position: fixed !important;
-   	top: -9999px !important;
-   	left: -9999px !important;
-}
-}*/
-
-
-/* Media query for menu when view under 768px */ 
-/*@media all and (max-width: 768px){
-#menubar {
-	width: 100%;
-	}
-#menu {
-    width: 100%;
-}
-#menu li {
-    width: 100%;
-}
-#menu li a {
-	display: block;
-    width: 100%;
-    padding: 10px;
-}
-}*/
 
 
 /*Media query for ipad version*/

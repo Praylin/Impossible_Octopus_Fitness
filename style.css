@@ -194,12 +194,12 @@ aside {
 .trending_status{
 	float: left;
 }
-#welcomeversion {
-  	position: fixed;
+
+.welcomeversion {
   	bottom: 0;
   	right:0;
   	width: 200px;
-  	background-color: yellow;
+  	font-style: italic;
 }
 
 
@@ -321,37 +321,43 @@ aside {
 		border-left: none;
 	}
 
+	#links li {
+		justify-content: center;
+	}
+
+	#links li a {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+    	background-color: black;
+    	color: white;
+    	padding: 5px;
+    	text-decoration: none;
+    	border-radius: 5px;
+    	width: 150px;
+	}
+
 	#menu {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 	}
+
+	/*#menubar {
+		justify-content: center;
+	}*/
 
 }
 
 
 @media (min-width: 768px) and (max-width: 992px){
-	.container {
-		display: flex;
-	}
 
-	#links {
-		float: right;
+	.tagline {
+		position: fixed;
+   		top: -9999px;
+   		left: -9999px;
 	}
-	#part1 {
-		float:left;
-    	width:33%;
-	}
-	#part2 {
-    	display: inline-block;
-    	margin:0 auto;
-   		width:33%;
-	}
-
-	#welcomeversion {
-    	float:right; 
-    	width:33%;
-    	background-color: white !important;
-	}
+}
 /* 8. Media Query for min 992px */
 /* 9. About Us page Background Image */
 

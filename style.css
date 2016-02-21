@@ -5,8 +5,8 @@
 /* 4. Logo */
 /* 5. Tagline */
 /* 6. Menu Bar */
-/* 7. Media Query for min/max: 768px/992px */
-/* 8. Media Query for min 992px */
+/* 7. Media query for width below 768px */
+/* 8. Media query for width between 768px and 992px*/
 /* 9. About Us page Background Image */
 
 
@@ -99,7 +99,6 @@ img {
 	justify-content: flex-start;
 	width: 50px;
 	height: auto;
-/*	padding: 5px;*/
 }
 a {
 	color: red;
@@ -143,20 +142,7 @@ a:hover {
 
 
 /* ***** 2. Container Header Section Aside Article Updates ***** */
-section {
-	display: flex;
-	flex-direction: column;
-}
-article {
-	/*justify-content: space-between;*/
-	width: 65%;
-    margin: 10px;
-}
-aside {
-	/*justify-content: space-around;*/
-	width: 35%;
-	margin: 10px;
-}
+
 .container {
 	display: flex; 
 	flex-direction: column;
@@ -169,32 +155,35 @@ aside {
 	flex-direction: column;
 	padding: 20px;
 	padding-left: 40px;
-	/*justify-content: space-around;*/
+}
+#logolinks {
+	display: flex;
+	align-self: auto;
+	justify-content: space-between; /*Align child elements to left and right ends*/
+}
+section {
+	display: flex;
+	flex-direction: column;
 }
 .article_aside {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 }
-#logolinks {
-	display: flex;
-	/*flex-direction: row;*/
-	align-self: auto;
-	justify-content: space-between; /*Align child elements to left and right ends*/
-	/*justify-content: space-around;*/
+article {
+	flex: 2;
+    margin: 10px;
+}
+aside {
+	flex: 1;
+	margin: 10px;
 }
 .updates {
-	/*justify-content: space-around;*/
 	float: left;
 }
 .notable_users {
-	/*justify-content: space-around;*/
 	float: left;
 }
-.trending_status{
-	float: left;
-}
-
 .welcomeversion {
   	bottom: 0;
   	right:0;
@@ -208,15 +197,8 @@ aside {
 #links {
 	display: flex;
 	flex-direction: row;
-	/*align-content: space-around;*/
-	/*list-style-type: none;*/
 	padding: 5px;
 }
-/*#links ul li{
-	flex-direction: row;
-	list-style-type: none;
-	justify-content: space-around;
-}*/
 #links li {
 	display: flex;
 	justify-content: flex-end;
@@ -231,54 +213,22 @@ aside {
 /* 4. ********** 4. Style for Logo ********** */
 
 #logo {
-	/*justify-content: flex-start;*/
 	justify-content: space-around;
 	width: 75px;
 	height: 120px;
 }
 
 
-/* 5. ********** Tagline ********** 
-
-/*.tagline {*/
-	/*justify-content: flex-start;
-	justify-content: space-around;*/
-	/*text-align: left;
-	position: relative;
-	clear: left;*/
-	/*padding-top: 2px;*/
-	/*font-style: italic;*/
-	/*margin-left: 90px;*/
-	/*}*/
-
-
 /* 6. ********** Menu Bar ********** */
 
-#menubar {
-	/*display: flex;*/
-	/*flex-direction: row;*/
-	/*justify-content: center;*/
-	/*overflow:hidden;*/
-	/*margin: auto;*/
-	/*display: block;
-	text-align: center;*/
-	/*padding: 5px;*/
-	/*width: auto;*/
-	}
+
 #menu {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-    /*padding: 5px;*/
-    /*text-align: right;*/
 }
 #menu li {
-	/*display: flex;
-	flex-direction: row;
-	justify-content: center;
-    display: block;*/
     padding: 5px;
-    /*text-align: center;*/
 }
 #menu li a {
 	display: flex;
@@ -292,39 +242,33 @@ aside {
     width: 150px;
 }
 
-/*Media query for width below 768px*/
+/* 7. ********** Media query for width below 768px ********** */
 
 @media all and (max-width: 768px){
-
-	.container {
-		display: flex; 
+	#logolinks {
+		display: flex;
 		flex-direction: column;
 	}
-
+	#logo {
+		align-self: center;
+		width: 75px;
+		height: 120px;
+	}
 	.tagline {
 		position: fixed;
    		top: -9999px;
    		left: -9999px;
 	}
-
-	#logolinks {
-		display: flex;
-		flex-direction: column;
-	}
-
 	#links {
 		display: flex;
 		flex-direction: column;
 	}
-
 	#links li+li {
 		border-left: none;
 	}
-
 	#links li {
 		justify-content: center;
 	}
-
 	#links li a {
 		display: flex;
 		flex-direction: row;
@@ -336,19 +280,19 @@ aside {
     	border-radius: 5px;
     	width: 150px;
 	}
-
 	#menu {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
-
-	/*#menubar {
-		justify-content: center;
-	}*/
-
+	.article_aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	}
 }
 
+/* 8. ********** Media query for width between 768px and 992px ********** */
 
 @media (min-width: 768px) and (max-width: 992px){
 
@@ -357,124 +301,16 @@ aside {
    		top: -9999px;
    		left: -9999px;
 	}
-}
-/* 8. Media Query for min 992px */
-/* 9. About Us page Background Image */
-
-
-/**************************************/
-/**************************************/
-/**************************************/
-/**************************************/
-
-/*Everything below has not been cleaned up.
-Best practices seem to dictate that mobile version
-is first to load, then media queries for larger screens*/
-/**************************************/
-/**************************************/
-/**************************************/
-/**************************************/
-
-
-
-/*Media query for ipad version*/
-
-/*@media (min-width: 768px) and (max-width: 992px){
-	.container {
-		width: 100%;
+	.article_aside {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 	}
-
-	#links {
-		float: right;
-	}
-	#part1 {
-		float:left;
-    	width:33%;
-	}
-	#part2 {
-    	display: inline-block;
-    	margin:0 auto;
-   		width:33%;
-	}
-
-	#welcomeversion {
-    	float:right; 
-    	width:33%;
-    	background-color: white !important;
+	aside {
+		display: flex;
+		flex-direction: row;
 	}
 }
-*/
-
-
-/* Media Query to modify article and aside */
-/*@media all and (max-width: 768px){
-.container {
-	width: 100%;
-}
-article {
-	width: 95%;
-}
-aside {
-	width: 95%;
-}
-.updates {
-	float: left;
-}
-#welcomeversion {
-  	padding: 30px;
-}
-}*/
-
-
-
-
-
-/* Media query for logo under 768px */ 
-/*@media all and (max-width: 768px){
-#logolinks{
-	width: 99%;
-	}
-#idlogo {
-	}
-}*/
-
-
-/* Media Query for Styles for Links for devices under 768px */
-/*@media all and (max-width: 768px){
-#links {
-	display: block;
-    float: none;
-    text-align: center;
-    width: 100%;
-}
-#links ul li{
-	list-style-type: none;
-	
-	margin-top: 0;
-	width: 100%;
-}
-#links li {
-	display: block;
-    float: left;
-    
-    text-align: center;
-    width: 100%;
-}
-#links li a {
-    background-color: black;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 4px 4px 4px 4px;
-    display: block;
-    width: 95%;
-}
-#links li+li {
-	border-left: none;
-}    
-}*/
-
-/* End Styles for Links for devices under 768px */
 
 
 

@@ -4,10 +4,10 @@
 /* 3. "Edit my profile" and "Logout" links */
 /* 4. Logo */
 /* 5. Menu Bar */
-/* 6. Media query for width below 768px */
-/* 7. Media query for width between 768px and 992px*/
+/* 6. Media query for width 768px and below*/
+/* 7. Media query for width between 769px and 992px*/
 /* 8. Userpage.html styles */
-
+/* 9. Aboutus.html styles */
 
 /* 0. Meyerweb CSS Reset */
 
@@ -129,10 +129,10 @@ a:hover {
 	height: 90px;
 	padding: 5px 5px 0 5px;
 }
-#bg_img { /*  About Us page Background image */
+.aboutus { /*  About Us page Background image */
 	background-image: url("backgroundpic.gif");
 	background-repeat: no-repeat; 
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 .about p { /*  About Us page  */
 	font-size: 200px;
@@ -241,7 +241,7 @@ aside {
     width: 150px;
 }
 
-/* 6. ********** Media query for width below 768px ********** */
+/* 6. ********** Media query for width 768px and below********** */
 
 @media all and (max-width: 768px){
 	#logolinks {
@@ -285,16 +285,16 @@ aside {
 		align-items: center;
 	}
 	.article_aside {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	.user img {
 		justify-content: center;
 	}
 }
 
-/* 7. ********** Media query for width between 768px and 992px ********** */
+/* 7. ********** Media query for width between 769px and 992px ********** */
 
 @media (min-width: 769px) and (max-width: 992px){
 
@@ -316,9 +316,14 @@ aside {
 
 /*8. ********** Styles for userpage.html ********** */
 
-.user img {
+.userpage img {
 	height: 250px;
 	width: 250px;
 }
 
+.userpage {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
 

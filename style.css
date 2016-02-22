@@ -3,11 +3,10 @@
 /* 2. Container, Header, Section, Aside, Article, and Updates */
 /* 3. "Edit my profile" and "Logout" links */
 /* 4. Logo */
-/* 5. Tagline */
-/* 6. Menu Bar */
-/* 7. Media query for width below 768px */
-/* 8. Media query for width between 768px and 992px*/
-/* 9. About Us page Background Image */
+/* 5. Menu Bar */
+/* 6. Media query for width below 768px */
+/* 7. Media query for width between 768px and 992px*/
+/* 8. Userpage.html styles */
 
 
 /* 0. Meyerweb CSS Reset */
@@ -219,7 +218,7 @@ aside {
 }
 
 
-/* 6. ********** Menu Bar ********** */
+/* 5. ********** Menu Bar ********** */
 
 
 #menu {
@@ -242,7 +241,7 @@ aside {
     width: 150px;
 }
 
-/* 7. ********** Media query for width below 768px ********** */
+/* 6. ********** Media query for width below 768px ********** */
 
 @media all and (max-width: 768px){
 	#logolinks {
@@ -290,11 +289,14 @@ aside {
 	flex-direction: column;
 	justify-content: space-around;
 	}
+	.user img {
+		justify-content: center;
+	}
 }
 
-/* 8. ********** Media query for width between 768px and 992px ********** */
+/* 7. ********** Media query for width between 768px and 992px ********** */
 
-@media (min-width: 768px) and (max-width: 992px){
+@media (min-width: 769px) and (max-width: 992px){
 
 	.tagline {
 		position: fixed;
@@ -312,6 +314,11 @@ aside {
 	}
 }
 
+/*8. ********** Styles for userpage.html ********** */
 
+.user img {
+	height: 250px;
+	width: 250px;
+}
 
 

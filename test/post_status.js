@@ -2,9 +2,11 @@
 document.addEventListener('DOMContentLoaded', displayForm);
 function displayForm()
 	{
-		var myForm = document.getElementById('post_status');
-		myForm.style.display = "block";
+		var theButton = document.getElementById('post_status_button');
+		theButton.onclick = function() {
+			document.getElementById('post_status').style.display = "block";
 	}
+}
 //document.addEventListener('DOMContentLoaded', function(){
 
 //1})

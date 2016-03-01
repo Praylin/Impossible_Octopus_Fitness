@@ -6,3 +6,7 @@ textarea {
 #post_status {
 	display: none;
 }
+
+.reply {
+	display: none;
+}

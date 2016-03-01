@@ -1,4 +1,3 @@
-//window.addEventListener('load', displayForm)
 document.addEventListener('DOMContentLoaded', displayForm);
 function displayForm()
 	{
@@ -7,6 +6,3 @@ function displayForm()
 			document.getElementById('post_status').style.display = "block";
 	}
 }
-//document.addEventListener('DOMContentLoaded', function(){
-
-//1})

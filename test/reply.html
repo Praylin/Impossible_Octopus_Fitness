@@ -4,14 +4,15 @@
 	<title>Post Status</title>
 	<link rel="stylesheet" type="text/css" href="post_status.css">
 	<!--script src="post_a_status.js"></script-->
-	<script src="toggle.js"></script>
+	<!--script src="toggle.js"></script-->
+	<script src="reply.js"></script>
 </head>
 <body>
-	<div id="reply_button"> 
-		<a href="#"><input type="button" value="Reply"></a>
+	<div>
+		<a class="reply_button" data-index="1" href="#"><input type="button" value="Reply"></a>
 	</div>
-	<div class="reply"> 
-		<form id="reply1">
+	<div > 
+		<form class="reply" id="1">
 			<textarea>
 			</textarea>
 			<div class="check">
@@ -20,11 +21,11 @@
 			</div>
 		</form>
 	</div>
-	<div id="reply_button"> 
-		<a href="#"><input type="button" value="Reply"></a>
+	<div > 
+		<a class="reply_button" data-index="2" href="#"><input type="button" value="Reply"></a>
 	</div>
-	<div class="reply"> 
-		<form id="reply2">
+	<div > 
+		<form class="reply" id="2">
 			<textarea>
 			</textarea>
 			<div class="check">

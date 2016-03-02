@@ -189,7 +189,19 @@ aside {
   	width: 200px;
   	font-style: italic;
 }
-
+textarea {
+	height: 50px;
+	width: 300px;
+}
+#post_status {
+	display: none;
+}
+.button_and_form {
+	margin: auto;
+}
+.reply {
+	display: none;
+}
 
 /* ********** 3. "Edit my profile" and "Logout" links ********** */ 
 

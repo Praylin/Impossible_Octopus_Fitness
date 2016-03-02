@@ -1,20 +1,14 @@
 //window.addEventListener('load', displayForm)
-document.addEventListener('DOMContentLoaded', displayForm);
-function displayForm()
-	{
-		var theButton = document.getElementById('post_status_button');
-		theButton.onclick = function() {
-			var theForm = document.getElementById('post_status');
-			var displayStyle = theForm.style.display;
-			if (displayStyle == "block")
-			{
-				theForm.style.display = "none";
-			}
-			else 
-			{
-				theForm.style.display = "block";
-			}
-	}
+HTMLElement.prototype.toggle = function() {
+	//var displayStyle = theForm.style.display;
+	if (this.style.display == "block")
+		{
+			this.style.display = "none";
+		}
+	else 
+		{
+			this.style.display = "block";
+		}
 }
 //document.addEventListener('DOMContentLoaded', function(){
 

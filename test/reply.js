@@ -7,7 +7,7 @@ for (var i = 0; i < elements.length; i++){
 		elements[i].addEventListener("click", function() {
 			//console.log("Check message");
 		var test = document.getElementById(this.dataset.index);
-		test.style.display = "block";
+		test.toggle();
 
     })
     

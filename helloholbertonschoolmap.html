@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <link rel="stylesheet" type="text/css"
+    href="https://js.api.here.com/v3/3.0/mapsjs-ui.css" />
+  <script type="text/javascript" charset="UTF-8"
+    src="https://js.api.here.com/v3/3.0/mapsjs-core.js"></script>
+  <script type="text/javascript" charset="UTF-8"
+    src="https://js.api.here.com/v3/3.0/mapsjs-service.js"></script>
+  <script type="text/javascript" charset="UTF-8"
+    src="https://js.api.here.com/v3/3.0/mapsjs-ui.js"></script>
+  <script type="text/javascript" charset="UTF-8"
+    src="https://js.api.here.com/v3/3.0/mapsjs-mapevents.js"></script>
+
+</head>
+<body style="margin: 0">
+  <div id="map" style="position: absolute; width: 100%; height: 100%; background: grey" />
+  <script  type="text/javascript" charset="UTF-8" >
+    
+/**
+ * Moves the map to display over Holberton
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+
+
+function moveMapToHolberton(map){
+  map.setCenter({lat:37.7920934, lng:-122.3999152});
+  map.setZoom(16);
+}
+// Add window resize listener to adjust the map dimensions. 
+window.addEventListener('resize', function () {
+    map.getViewPort().resize(); 
+});
+
+
+
+
+/**
+ * Adds a rectangle to the map
+ *
+ * @param  {H.Map} map      A HERE Map instance within the application
+ */
+// function addRectangleToMap(map) {
+//   var boundingBox = new H.geo.Rect(53.1, 13.1, 43.1, 40.1);
+//   map.addObject(
+//     new H.map.Rect(boundingBox, {
+//       style: {
+//         fillColor: '#FFFFCC',
+//         strokeColor: '#E8FA75',
+//         lineWidth: 8
+//       },
+//     })
+//   );
+// }
+
+
+
+
+
+
+/**
+ * Boilerplate map initialization code starts below:
+ */
+
+//Step 1: initialize communication with the platform
+var platform = new H.service.Platform({
+  app_id: 'DemoAppId01082013GAL',
+  app_code: 'AJKnXv84fjrb0KIHawS0Tg',
+  useCIT: true,
+  useHTTPS: true
+});
+var defaultLayers = platform.createDefaultLayers();
+
+//Step 2: initialize a map  - not specificing a location will give a whole world view.
+var map = new H.Map(document.getElementById('map'),
+  defaultLayers.normal.map);
+
+//Step 3: make the map interactive
+// MapEvents enables the event system
+// Behavior implements default interactions for pan/zoom (also on mobile touch environments)
+var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, defaultLayers);
+// var rt = H.ui.ZoomRectangle(opt_options);
+
+// Now use the map as required...
+// addRectangleToMap(map);
+moveMapToHolberton(map);
+  </script>
+</body>
+</html>

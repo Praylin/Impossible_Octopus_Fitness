@@ -52,11 +52,28 @@ var map = new H.Map(document.getElementById('map'),
 // MapEvents enables the event system
 // Behavior implements default interactions for pan/zoom (also on mobile touch environments)
 var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+// // Enable the event system on the map instance:
+// var mapEvents = new H.mapevents.MapEvents(map);
 
+// // Add event listener:
+// map.addEventListener('tap', function(evt) {
+//   // Log 'tap' and 'mouse' events:
+//   console.log(evt.type, evt.currentPointer.type); 
+// });
 // Create the default UI components
 var ui = H.ui.UI.createDefault(map, defaultLayers);
-//var zr = H.ui.ZoomRectangle();
+
 // Now use the map as required...
+// Create an info bubble object at a specific geographic location:
+var bubble = new H.ui.InfoBubble({ lat:37.792085, lng:-122.399368 }, {
+        content: '<b>Hello Holberton School!</b>'
+       });
+
+// Add info bubble to the UI:
+ui.addBubble(bubble);
+
+//var control = new H.ui.addControl(ctrlname, H.ui.Control)
+
 moveMapToHolberton(map);
 
   </script>

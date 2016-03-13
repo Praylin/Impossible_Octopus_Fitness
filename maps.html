@@ -90,16 +90,16 @@ zoomrectangle.setAlignment('right-middle');
 //     evt.currentPointer.viewportY);
 // });
 
-function setUpClickListener(map) {
-  map.addEventListener('tap', function (evt) {
-    var coord = map.screenToGeo(evt.currentPointer.viewportX,
-            evt.currentPointer.viewportY);
-    alert('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
-        ((coord.lat > 0) ? 'N' : 'S') +
-        ' ' + Math.abs(coord.lng.toFixed(4)) +
-         ((coord.lng > 0) ? 'E' : 'W'));
-  });
-}
+// function setUpClickListener(map) {
+//   map.addEventListener('tap', function (evt) {
+//     var coord = map.screenToGeo(evt.currentPointer.viewportX,
+//             evt.currentPointer.viewportY);
+//     alert('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
+//         ((coord.lat > 0) ? 'N' : 'S') +
+//         ' ' + Math.abs(coord.lng.toFixed(4)) +
+//          ((coord.lng > 0) ? 'E' : 'W'));
+//   });
+// }
 
 // Contextmenu Listener
 // Enable map events, like "contextmenu"
@@ -108,19 +108,21 @@ function setUpClickListener(map) {
 // Show default controls as well as the Context Menu control
 //var ui = H.ui.UI.createDefault(map, defaultLayers, 'en-EN');
 
-// Add 'Zoom in' context menu item
-// map.addEventListener('contextmenu', function(e) {
-//   e.items.push(new H.util.ContextItem({
-//   label: 'Zoom in',
-//   callback: function() {
-//     map.setZoom(map.getZoom() + 1);
-//   }
-//   }));
-// });
+// Add 'Hello Holberton School' context menu item
+map.addEventListener('contextmenu', function(e) { 
+ //function onContextMenuRequested(e) {
+  e.items.push(new H.util.ContextItem({
+  label: 'Hello Holberton School!',
+  callback: function() {
+    map.setZoom(map.getZoom() + 1);
+  }
+  }));
+});
 
 
 moveMapToHolberton(map);
-setUpClickListener(map);
+//onContextMenuRequested(e);
+// setUpClickListener(map);
   </script>
 </body>
 </html>

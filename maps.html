@@ -23,6 +23,9 @@
  *
  * @param  {H.Map} map      A HERE Map instance within the application
  */
+
+ 
+
 function moveMapToHolberton(map){
   map.setCenter({lat:37.792085, lng:-122.399368});
   map.setZoom(16);
@@ -34,6 +37,8 @@ window.addEventListener('resize', function() {
 /**
  * Boilerplate map initialization code starts below:
  */
+
+
 
 //Step 1: initialize communication with the platform
 var platform = new H.service.Platform({
@@ -65,17 +70,57 @@ var ui = H.ui.UI.createDefault(map, defaultLayers);
 
 // Now use the map as required...
 // Create an info bubble object at a specific geographic location:
-var bubble = new H.ui.InfoBubble({ lat:37.792085, lng:-122.399368 }, {
-        content: '<b>Hello Holberton School!</b>'
-       });
+// var bubble = new H.ui.InfoBubble({ lat:37.792085, lng:-122.399368 }, {
+//         content: '<b>Hello Holberton School!</b>'
+//        });
 
-// Add info bubble to the UI:
-ui.addBubble(bubble);
-
+// // Add info bubble to the UI:
+// ui.addBubble(bubble);
+//zoom Rectangle
+var name = 'zoomrectangle';
+var control = new H.ui.ZoomRectangle();
+ui.addControl(name, control);
+var zoomrectangle = ui.getControl('zoomrectangle');
+zoomrectangle.setAlignment('right-middle');
+// ui.setVisibility(zoom);
 //var control = new H.ui.addControl(ctrlname, H.ui.Control)
+//Getting position in map while tap
+// map.addEventListener('tap', function (evt) {
+//   alert('Clicked at ' + evt.currentPointer.viewportX + ',' +
+//     evt.currentPointer.viewportY);
+// });
+
+function setUpClickListener(map) {
+  map.addEventListener('tap', function (evt) {
+    var coord = map.screenToGeo(evt.currentPointer.viewportX,
+            evt.currentPointer.viewportY);
+    alert('Clicked at ' + Math.abs(coord.lat.toFixed(4)) +
+        ((coord.lat > 0) ? 'N' : 'S') +
+        ' ' + Math.abs(coord.lng.toFixed(4)) +
+         ((coord.lng > 0) ? 'E' : 'W'));
+  });
+}
+
+// Contextmenu Listener
+// Enable map events, like "contextmenu"
+//var events = new H.mapevents.MapEvents(map);
+
+// Show default controls as well as the Context Menu control
+//var ui = H.ui.UI.createDefault(map, defaultLayers, 'en-EN');
+
+// Add 'Zoom in' context menu item
+// map.addEventListener('contextmenu', function(e) {
+//   e.items.push(new H.util.ContextItem({
+//   label: 'Zoom in',
+//   callback: function() {
+//     map.setZoom(map.getZoom() + 1);
+//   }
+//   }));
+// });
+
 
 moveMapToHolberton(map);
-
+setUpClickListener(map);
   </script>
 </body>
 </html>

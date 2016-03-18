@@ -1,7 +1,15 @@
-var onSuccess = function(extra_statuses)
-{
-}
-var ajaxGet = function(url, onSuccess) {
-	var xhttp = new XMLHttpRequest();
 
+function ajaxGet(url, onSuccess) {
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+    if (xhttp.readyState == 4 && xhttp.status == 200) {
+      onSuccess(xhttp);
+    }
+  };
+  xhttp.open("GET", url, true);
+  xhttp.send();
+}
+
+function onSuccess(xhttp) {
+  document.getElementById("extra_statuses").innerHTML = xhttp.responseText;
 }

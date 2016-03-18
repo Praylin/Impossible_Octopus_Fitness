@@ -1,4 +1,4 @@
-function ajaxjohn(url, onSuccess) {
+function johnajax(url, onSuccess) {
   var xhttp;
   xhttp=new XMLHttpRequest ();
   xhttp.onreadystatechange = function() {

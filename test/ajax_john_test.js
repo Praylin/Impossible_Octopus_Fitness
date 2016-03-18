@@ -1,10 +1,12 @@
 function ajax(url, onSuccess) {
-  var xhttp = new XMLHttpRequest();
+  var xhttp;
+  xhttp=new XMLHttpRequest ();
   xhttp.onreadystatechange = function() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
-      document.getElementById("string").innerHTML = xhttp.responseText;
+      onSuccess(xhttp);
     }
   };
-  xhttp.open("GET", "url", true);
+  xhttp.open("GET", url, true);
   xhttp.send();
 }
+

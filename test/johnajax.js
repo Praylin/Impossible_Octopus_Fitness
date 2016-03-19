@@ -1,3 +1,4 @@
+
 function johnajax(url, onSuccess) {
   var xhttp;
   xhttp=new XMLHttpRequest ();
@@ -9,4 +10,3 @@ function johnajax(url, onSuccess) {
   xhttp.open("GET", url, true);
   xhttp.send();
 }
-

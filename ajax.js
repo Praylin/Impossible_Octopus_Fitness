@@ -8,6 +8,7 @@ function ajaxGet(url, onSuccess) {
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
       		onSuccess(xhttp);
+		//call function in reply.js here      	
     	}
   	};
  	xhttp.open("GET", url, true);

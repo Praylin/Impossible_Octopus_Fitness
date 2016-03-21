@@ -1,15 +1,15 @@
+//Reply button for each status
 document.addEventListener('DOMContentLoaded', function () {
-var elements = document.getElementsByClassName('reply_button');
-//console.log(elements);
-for (var i = 0; i < elements.length; i++){
-      //elements[i].onclick = function() {
+	var elements = document.getElementsByClassName('reply_button');
+
+	for (var i = 0; i < elements.length; i++){
 
 		elements[i].addEventListener("click", function() {
-			//console.log("Check message");
-		var test = document.getElementById(this.dataset.index);
-		test.toggle();
 
-    })
-    
-}
+			var test = document.getElementById(this.dataset.index);
+			test.toggle();
+
+		})
+
+	}
 })

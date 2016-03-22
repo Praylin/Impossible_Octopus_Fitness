@@ -374,6 +374,10 @@ textarea {
 	flex-direction: column;
 	justify-content: space-around;
 	}
+	article {
+		display: flex;
+		flex-direction: column;
+	}
 	
 	aside {
 		display: flex;

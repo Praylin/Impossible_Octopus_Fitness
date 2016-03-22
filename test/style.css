@@ -172,6 +172,7 @@ section {
 article {
 	flex: 2;
     margin: 10px;
+    flex-direction: column;
 }
 aside {
 	flex: 1;

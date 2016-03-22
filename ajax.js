@@ -8,7 +8,7 @@ function ajaxGet(url, onSuccess) {
 	  xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
       		onSuccess(xhttp);
-          replyFunction();   	
+          replyFunction();  //Makes the reply button in new statuses to work	
     	}
   	};
     

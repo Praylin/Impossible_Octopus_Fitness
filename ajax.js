@@ -8,10 +8,9 @@ function ajaxGet(url, onSuccess) {
 	  xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
       		onSuccess(xhttp);
-          replyFunction();  //Makes the reply button in new statuses to work	
+          replyFunction();  //Makes the reply button in new statuses to work
     	}
   	};
-    
     xhttp.open("GET", url, true);
   	setTimeout(function(){
   		xhttp.send();
@@ -19,7 +18,3 @@ function ajaxGet(url, onSuccess) {
   		buttonId.style.cursor = "default";
   	}, 2000);
 }
-
-
-
-

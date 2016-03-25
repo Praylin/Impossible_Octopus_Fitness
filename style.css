@@ -155,6 +155,12 @@ a:hover {
 	padding: 20px;
 	padding-left: 40px;
 }
+.footer {
+	display: flex;
+	flex-direction: column;
+	background-image: url("pics/black_footer.jpg");
+	background-color: black;
+}
 #logolinks {
 	display: flex;
 	align-self: auto;
@@ -207,6 +213,7 @@ textarea {
 .reply {
 	display: none;
 }
+
 /*Call to Action Button styles*/
 
 .button {
@@ -295,6 +302,16 @@ textarea {
 #menu li {
     padding: 5px;
 }
+#menu li:hover {
+    font-weight: bold;
+    font-style: italic;
+    color: #FF0000;
+}
+/*#menu li:focus{
+    font-weight: bold;
+    font-style: italic;
+    color: #FF0000;
+}*/
 #menu li a {
 	display: flex;
 	flex-direction: row;

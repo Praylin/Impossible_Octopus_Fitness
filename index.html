@@ -6,12 +6,16 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Impossible Octopus Fitness: Twitter Clone</title>
+        <title>The Twitter Clone</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="impossible octopus fitness">
         <meta name="author" content="impossible octopus fitness, John, Praylin">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen and (max-width: 768px)">
+        <noscript><style type="text/css">
+            #post_status {display: block;}
+        </style>
+        </noscript>
         <script src="post_a_status.js"></script>
         <script src="toggle.js"></script>
         <script src="reply.js"></script>
@@ -36,7 +40,7 @@
                     </div>
                 </div>
     		    <div class="tagline">
-    			    <h3><a href="aboutus.html">Impossible octopus fitness...</a></h3>
+    			    <p><a href="aboutus.html">Impossible octopus fitness...</a></p>
     		    </div>
 
 
@@ -54,18 +58,19 @@
 <!--Content-->
 
             <section>
-                <h6>Twitter Clone</h6>
+                <h1>The Twitter Clone</h1>
 <!--This is where Post status button and the text area reside-->
                 <div class="button_and_form">
                     <div id="post_status_button">
                         <input type="button" value="Post a status">
                     </div>
-                    <form id="post_status">
-                        <textarea>
+                    <form id="post_status" title="Post_Status">
+                        <textarea title="Post_Status">
                         </textarea>
                         <div class="check">
-                            <label><input type="checkbox" value="">Location</label>
-                            <input type="button" value="Post">
+                            <input type="checkbox" id="Location" name="Location">
+                            <label for="Location">Location</label>
+                            <input type="submit" value="Post">
                         </div>
                     </form>
                 </div>
@@ -81,12 +86,13 @@
 <!--This is where the reply button and its form reside-->
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="1" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="1">
-                                    <textarea>
+                                <form class="reply" id="1" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location1" name="location">
+                                        <label for="Location1">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -98,12 +104,13 @@
                             <p> Feverishly working on projects! The project which I liked most was impossible octopus fitness. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="2" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="2">
-                                    <textarea>
+                                <form class="reply" id="2" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location2" name="location">
+                                        <label for="Location2">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -115,12 +122,13 @@
                             <p> Feverishly working on projects and hearing the song impossible octopus fitness. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="3" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="3">
-                                    <textarea>
+                                <form class="reply" id="3" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location3" name="location">
+                                        <label for="Location3">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -132,12 +140,13 @@
                             <p> Avid underwater basket-weaver, racecar driver, and Pulitzer Prize-winning novelist.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="4" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="4">
-                                    <textarea>
+                                <form class="reply" id="4" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location4" name="location">
+                                        <label for="Location4">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -149,12 +158,13 @@
                             <p> Avid underwater basket-weaver, racecar driver, impossible octopus fitness practiotioner and Pulitzer Prize-winning novelist.<br>Accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="5" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="5">
-                                    <textarea>
+                                <form class="reply" id="5" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location5" name="location">
+                                        <label for="Location5">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -166,12 +176,13 @@
                             <p> Avid underwater basket-weaver, racecar driver, and Pulitzer Prize-winning novelist.<br>"Sed ut perspiciatis impossible octopus fitness unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="6" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="6">
-                                    <textarea>
+                                <form class="reply" id="6" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location6" name="location">
+                                        <label for="Location6">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -183,12 +194,13 @@
                             <p> Now a co-founder of Holberton School, a project-based alternative to college for the next generation of software engineers. Background: a lot of full-stack engineering stuff, but a lot of other stuff too back in the days (webmarketing, online brand protection, PM, sales, recruitment, ...)Practicing right now: Ruby, Go, front-end stuff, Node.js, Java, some Python. In a previous life, I also spoke in many conferences, and wrote a book in French language. That was tons of fun.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="7" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="7">
-                                    <textarea>
+                                <form class="reply" id="7" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location7" name="location">
+                                        <label for="Location7">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -200,12 +212,13 @@
                             <p> Today Microsoft and Docker took the opportunity to talk about and demonstrate some of the progress we have been able to make together over the past 6 months. This culminated in to showing for the first time at Microsoft Build the Docker Engine running successfully on Windows Server. Like many companies just starting to work with Microsoft, we had some reservations about what we could ultimately accomplish together.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="8" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="8">
-                                    <textarea>
+                                <form class="reply" id="8" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location8" name="location">
+                                        <label for="Location8">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -217,12 +230,13 @@
                             <p> Understanding assembly code is definitely a challenge, but it can be easily understood if you spend enough time looking through documentation and communicating with your peers. In this blog I am going to attempt to explain a small part of assembly code, so that you don’t have to spend too much time looking for documentation.</p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="9" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="9">
-                                    <textarea>
+                                <form class="reply" id="9" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location9" name="location">
+                                        <label for="Location9">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>
@@ -234,12 +248,13 @@
                             <p> Art should be made with the heart and the hands. I work with my hands because they usually tell the truth better than my head does. I am an artist because it's my way of communicating with the world. I create art to create places and spaces of community. </p>
                             <div class="reply_button_and_form">
                                 <div class="reply_button" data-index="10" ><input type="button" value="Reply"></div>
-                                <form class="reply" id="10">
-                                    <textarea>
+                                <form class="reply" id="10" title="reply">
+                                    <textarea title="reply">
                                     </textarea>
                                     <div class="check">
-                                        <label><input type="checkbox" value="">Location</label>
-                                        <input type="button" value="Submit">
+                                        <input type="checkbox" id="Location10" name="location">
+                                        <label for="Location10">Location</label>
+                                        <input type="submit" value="Reply">
                                     </div>
                                 </form>
                             </div>

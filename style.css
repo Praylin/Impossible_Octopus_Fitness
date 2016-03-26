@@ -302,16 +302,11 @@ textarea {
 #menu li {
     padding: 5px;
 }
-#menu li:hover {
+#menu li:hover, li:focus, li:active {
     font-weight: bold;
     font-style: italic;
-    color: #FF0000;
+    /*background-color: #ffcccc;*/
 }
-/*#menu li:focus{
-    font-weight: bold;
-    font-style: italic;
-    color: #FF0000;
-}*/
 #menu li a {
 	display: flex;
 	flex-direction: row;

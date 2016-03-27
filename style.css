@@ -11,7 +11,7 @@
 
 /* 0. Meyerweb CSS Reset */
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
    */
@@ -24,8 +24,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -36,7 +36,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -131,7 +131,7 @@ a:hover {
 }
 .aboutus { /*  About Us page Background image */
 	background-image: url("backgroundpic.gif");
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 	/*background-color: yellow;*/
 }
 .about p { /*  About Us page  */
@@ -140,10 +140,10 @@ a:hover {
 
 
 
-/* ***** 2. Container Header Section Aside Article Updates ***** */
+/* ***** 2. Container Header Section Aside Article Updates Footer ***** */
 
 .container {
-	display: flex; 
+	display: flex;
 	flex-direction: column;
 	padding: 20px;
 	margin-left: 20px;
@@ -155,12 +155,12 @@ a:hover {
 	padding: 20px;
 	padding-left: 40px;
 }
-.footer {
-	display: flex;
-	flex-direction: column;
-	background-image: url("pics/black_footer.jpg");
-	background-color: black;
+
+footer {
+	max-width: 100%;
+	background: url("pics/black_footer.jpg");
 }
+
 #logolinks {
 	display: flex;
 	align-self: auto;
@@ -198,7 +198,7 @@ aside {
     right: 0;
     padding: 5px 5px;
     margin: 0 5px;
-    background-color: #ffffb3;   
+    background-color: #ffffb3;
 }
 textarea {
 	height: 50px;
@@ -264,7 +264,7 @@ textarea {
 }
 
 
-/* ********** 3. "Edit my profile" and "Logout" links ********** */ 
+/* ********** 3. "Edit my profile" and "Logout" links ********** */
 
 #links {
 	display: flex;
@@ -390,7 +390,7 @@ textarea {
 		display: flex;
 		flex-direction: column;
 	}
-	
+
 	aside {
 		display: flex;
 		flex-direction: row;
@@ -409,4 +409,3 @@ textarea {
 	flex-direction: row;
 	justify-content: space-around;
 }
-

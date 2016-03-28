@@ -159,6 +159,12 @@ a:hover {
 footer {
 	max-width: 100%;
 	background: url("pics/black_footer.jpg");
+	display: flex;
+	flex-direction: column ;
+}
+
+footer a {
+	margin: 10px 50px;
 }
 
 #logolinks {
@@ -199,6 +205,7 @@ aside {
     padding: 5px 5px;
     margin: 0 5px;
     background-color: #ffffb3;
+    font-size: 15px;
 }
 textarea {
 	height: 50px;
@@ -212,6 +219,11 @@ textarea {
 }
 .reply {
 	display: none;
+}
+
+noscript #post1_nojs {
+	display: block;
+	margin: 10px 400px;
 }
 
 /*Call to Action Button styles*/
@@ -370,6 +382,9 @@ textarea {
 	.user img {
 		justify-content: center;
 	}
+	.welcomeversion {
+		font-size: 5px;
+	}
 }
 
 /* 7. ********** Media query for width between 769px and 992px ********** */
@@ -390,10 +405,12 @@ textarea {
 		display: flex;
 		flex-direction: column;
 	}
-
 	aside {
 		display: flex;
 		flex-direction: row;
+	}
+	.welcomeversion {
+		font-size: 10px;
 	}
 }
 

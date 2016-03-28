@@ -12,10 +12,6 @@
         <meta name="author" content="impossible octopus fitness, John, Praylin">
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" type="text/css" href="style.css" media="screen and (max-width: 768px)">
-        <noscript><style type="text/css">
-            #post1 {display: block;}
-        </style>
-        </noscript>
         <script src="post_a_status.js"></script>
         <script src="toggle.js"></script>
         <script src="reply.js"></script>
@@ -74,6 +70,18 @@
                         </div>
                     </form>
                 </div>
+<!--HTML which has to be applied when JS is disabled-->
+                <noscript>
+                    <form id="post1_nojs" title="Post_Status_nojs">
+                        <textarea title="Post_Status_nojs">
+                        </textarea>
+                        <div class="check_nojs">
+                            <input type="checkbox" id="Location_nojs" name="Location_nojs">
+                            <label for="Location">Location</label>
+                            <input type="submit" value="Post">
+                        </div>
+                    </form>
+                </noscript>
 <!--This is where the status updates reside-->
                 <div class ="article_aside">
                     <article>
@@ -296,12 +304,10 @@
 
             </section>
             <footer>
-              <li><a href="#">Home</a></li>
-              <br><li><a href="#">My Statuses</a></li>
-              <br><li><a href="allusers.html">All Users</a></li>
-              <br>
+              <a href="#">Home</a>
+              <br><a href="#">My Statuses</a>
+              <br><a href="allusers.html">All Users</a>
             </footer>
-            </div>
         </div>
     </body>
 </html>

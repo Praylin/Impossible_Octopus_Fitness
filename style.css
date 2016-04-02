@@ -139,6 +139,9 @@ a:hover {
 
 #para p {
 	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	font-style: italic;
 }
 
 #pictures img{
@@ -164,6 +167,8 @@ a:hover {
 	padding: 20px;
 	padding-left: 40px;
 	background-color: #8cb1d9;
+	border: 1px solid #ccc;
+	border-radius: 10px;
 }
 
 footer {
@@ -203,6 +208,10 @@ aside {
 }
 .updates {
 	float: left;
+	border: 1px solid #ccc;
+	border-style: solid;
+	border-radius: 10px;
+	padding: 10px;
 }
 .notable_users {
 	float: left;

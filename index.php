@@ -1,3 +1,22 @@
+<?php 
+    $login = $_POST['login'];
+    $password = $_POST['password'];
+    $users = [
+    array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
+    array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
+    array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
+  ];
+  function userExists($login, $password, $users) {
+    foreach ($users as &$array) {
+        if (($array["login"] == $login) && ($array["password"] == $password)) {
+            return $array["full_name"];   
+        }
+    return false;
+    }    
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -48,6 +67,40 @@
                         <li><a href="allusers.html">All Users</a></li>
     		        </ul>
                 </div>
+                <?php 
+                    
+                    
+                    // // $array = array($username => $login);
+                    // // if (isset($array[$username]) != $login) {
+                    // //     echo "there";
+                    // // } else {
+                    // //      echo $login;
+                    // // //     $encode = str_rot13($login);
+                    // // //     echo $encode;
+                    // // }
+                    
+                    if ($login == NULL){
+                        echo "Hello there!";
+                    } else {
+                        // echo $login;
+                        $full_name = userExists($login, $password, $users);
+                        if ($full_name == false) {
+                            echo "Hello there!";
+                            echo nl2br("\n");
+                            echo "<font color='red'>Invalid credentials</font>";
+                        }
+                        else {
+                            echo "Hello ";
+                            echo $full_name;
+                            echo "!";
+                            $encode = str_rot13($login);
+                            echo nl2br("\n");
+                            echo "Your rot13’d login is: ";
+                            echo ($encode);
+                        }
+                    }
+                    // echo 'Hello ' . htmlspecialchars($_GET["login"]) . '!';
+                ?>
             </div>
 
 

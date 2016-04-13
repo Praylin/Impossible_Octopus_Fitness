@@ -53,6 +53,6 @@
   			<input type="submit" value="Submit">
 		</form>
 
-		<!--?php echo $_POST['login']; ?-->
+		<?php echo $_POST['login']; ?>
     </body>
 </html>

@@ -1,24 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <?php 
-    $login = $_POST['login'];
+    $login = $_POST['login']; //Getting login and password from login.php
     $password = $_POST['password'];
     $users = [
     array("id" => 1, "login" => "user1", "password" => "password1", "full_name" => "User 1"),
     array("id" => 2, "login" => "user2", "password" => "password2", "full_name" => "User 2"),
     array("id" => 3, "login" => "user3", "password" => "password3", "full_name" => "User 3"),
   ];
+
+//Function to authenticate user 
   function userExists($login, $password, $users) {
-    foreach ($users as &$array) {
-        if (($array["login"] == $login) && ($array["password"] == $password)) {
-            return $array["full_name"];   
-        }
-    return false;
+    foreach ($users as &$elem) {
+        if ($elem["login"] == $login) {
+            if ($elem["password"] == $password) {
+                return $elem["full_name"]; 
+            } else { 
+                return false;
+            }
+        }   
     }    
   }
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
 
 <!--This is a beta website created for Holberton School designed to demonstrate Impossible Octopus Fitness and the creation of a twitter clone.  The site is structured with a home page and subpages and is designed to be responsive to different screen sizes -->
 
@@ -67,39 +72,34 @@
                         <li><a href="allusers.html">All Users</a></li>
     		        </ul>
                 </div>
+
                 <?php 
-                    
-                    
-                    // // $array = array($username => $login);
-                    // // if (isset($array[$username]) != $login) {
-                    // //     echo "there";
-                    // // } else {
-                    // //      echo $login;
-                    // // //     $encode = str_rot13($login);
-                    // // //     echo $encode;
-                    // // }
-                    
+//Displays full name of user if authenticated                 
                     if ($login == NULL){
                         echo "Hello there!";
                     } else {
-                        // echo $login;
+
                         $full_name = userExists($login, $password, $users);
                         if ($full_name == false) {
                             echo "Hello there!";
                             echo nl2br("\n");
-                            echo "<font color='red'>Invalid credentials</font>";
+                            echo "<div style =color:red>Invalid credentials</div>";
                         }
                         else {
                             echo "Hello ";
                             echo $full_name;
                             echo "!";
+//Encode the username using rot13
                             $encode = str_rot13($login);
                             echo nl2br("\n");
                             echo "Your rot13’d login is: ";
                             echo ($encode);
+                            echo nl2br("\n");
+                            echo "The length of your login is:";
+                            echo strlen($login);
                         }
                     }
-                    // echo 'Hello ' . htmlspecialchars($_GET["login"]) . '!';
+
                 ?>
             </div>
 
